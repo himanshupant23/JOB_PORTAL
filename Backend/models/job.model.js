@@ -9,10 +9,14 @@ description:{
     required:true
 },
 requirement:{
-    type:String,
+    type:[String],
     required:true
 },
 salary:{
+    type:Number,
+    required:true
+},
+experience:{
     type:Number,
     required:true
 },
@@ -45,4 +49,5 @@ applications:[
    }
 ]
 },{timestamps:true});
+
 export const Job = mongoose.model("Job",jobSchema);
