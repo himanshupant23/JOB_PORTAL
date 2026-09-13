@@ -10,6 +10,7 @@
  import userRoute from "./Routes/user.route.js";
  import companyRoute from "./Routes/company.route.js";
  import jobRoute from "./Routes/job.route.js";
+ import applicationRoute from "./Routes/application.route.js";
 dotenv.config({});
  const app =express();
  const corsOptions ={
@@ -28,7 +29,7 @@ app.use(cors(corsOptions));
  app.use("/api/v1/user", userRoute);
 app.use("/api/v1/company" , companyRoute);
 app.use("/api/v1/job" ,jobRoute );
-
+app.use("/api/v1/application" ,applicationRoute );
  connectDB().then(() => {
   app.listen(PORT, () => {
       console.log(`Server is running at port ${PORT}`);
